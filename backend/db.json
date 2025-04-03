@@ -11,30 +11,21 @@
     },
     {
       "nome": "João",
-      "telefone": "88 88888888",
-      "email": "maria@email.com",
+      "telefone": "18 988040181",
+      "email": "joao@email.com",
       "aniversario": "06/01/1990",
       "redes": "",
       "observacoes": "",
       "id": 2
     },
     {
-      "nome": "SAULO DE ARAUJO ELEUTERIO",
-      "telefone": "18988040181",
-      "email": "saeleuterio@hotmail.com",
+      "nome": "Ana",
+      "telefone": "18988010152",
+      "email": "sa@sa.com",
       "aniversario": "",
       "redes": "",
       "observacoes": "",
       "id": 3
-    },
-    {
-      "nome": "Ana",
-      "telefone": "1898888-8808",
-      "email": "saeleuterio@hotmail.com",
-      "aniversario": "",
-      "redes": "",
-      "observacoes": "",
-      "id": 4
     }
   ]
 }
