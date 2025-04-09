@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ContainerComponent } from "../../componentes/container/container.component";
+import { ContainerComponent } from '../../componentes/container/container.component';
 import { Contato } from '../../componentes/contato/contato';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { ContatoService } from '../../services/contato.service';
-import { SeparadorComponent } from "../../componentes/separador/separador.component";
+import { SeparadorComponent } from '../../componentes/separador/separador.component';
+import { CabecalhoComponent } from '../../componentes/cabecalho/cabecalho.component';
 
 @Component({
   selector: 'app-perfil-contato',
@@ -13,8 +14,9 @@ import { SeparadorComponent } from "../../componentes/separador/separador.compon
     CommonModule,
     ContainerComponent,
     RouterLink,
-    SeparadorComponent
-],
+    SeparadorComponent,
+    CabecalhoComponent
+  ],
   templateUrl: './perfil-contato.component.html',
   styleUrl: './perfil-contato.component.css'
 })
@@ -31,24 +33,24 @@ export class PerfilContatoComponent implements OnInit{
   }
 
   constructor(
-    private activatedRooute: ActivatedRoute,
+    private activatedRoute: ActivatedRoute,
     private contatoService: ContatoService,
     private router: Router
-  ) {}
+    ) {}
 
   ngOnInit() {
-      const id = this.activatedRooute.snapshot.paramMap.get('id')
-      if(id) {
-        this.contatoService.buscarPorId(parseInt(id)).subscribe((contato) => {
-          this.contato = contato
-        })
-      }
+    const id = this.activatedRoute.snapshot.paramMap.get('id');
+    if (id) {
+      this.contatoService.buscarPorId(parseInt(id)).subscribe((contato) => {
+        this.contato = contato;
+      });
+    }
   }
 
   excluir() {
-    if(this.contato.id){
+    if(this.contato.id) {
       this.contatoService.excluirContato(this.contato.id).subscribe(() => {
-        this.router.navigateByUrl('/lista-contatos;')
+        this.router.navigateByUrl('/lista-contatos')
       })
     }
   }

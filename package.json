@@ -34,19 +34,5 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
     "typescript": "~5.2.2"
-  },
-  "description": "![Descricao da sua imagem](./thumbnail.png)",
-  "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/saeleuterio/indexa-projeto-base.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/saeleuterio/indexa-projeto-base/issues"
-  },
-  "homepage": "https://github.com/saeleuterio/indexa-projeto-base#readme"
+  }
 }
